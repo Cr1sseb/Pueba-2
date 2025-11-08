@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\CategoriaController;
+// CORREGIDO: "app" debe ser "App" (Mayúscula)
+use App\Http\Controllers\CategoriaController; 
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('almacen/categoria', 'CategoriaController'::class);
+// CORREGIDO: Se quitan las comillas de 'CategoriaController'
+Route::resource('almacen/categoria', CategoriaController::class);
